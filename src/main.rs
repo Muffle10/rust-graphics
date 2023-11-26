@@ -1,4 +1,6 @@
 use raylib::prelude::*;
+use raylib::prelude::Color;
+
 
 fn main() {
     let (mut rl, thread) = raylib::init()
@@ -8,7 +10,7 @@ fn main() {
     while !rl.window_should_close() {
         let mut d = rl.begin_drawing(&thread);
         d.clear_background(Color::WHITE);
-        d.draw_text("Hello, world!", 12, 12, 20, Color::BLACK);
+        d.draw_text("Hello, world!", 12, 12, 20, BLACK);
         d.draw_circle(10, 10, 10.0, Color::BLACK);
     }
 }
